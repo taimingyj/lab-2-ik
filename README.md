@@ -49,7 +49,7 @@ included in this pixi package.
 Try running
 
 ```bash
-yourdfpy ./halodi/eve_r3.urdf
+yourdfpy ./ur5/ur5_gripper.urdf
 ```
 
 and a window should open, allowing you to inspect the robot model.
