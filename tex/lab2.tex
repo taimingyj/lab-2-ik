@@ -1,15 +1,48 @@
 \documentclass[12pt, letterpaper]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[margin=1in]{geometry}
-\usepackage{amsmath, amssymb, hyperref}
+\usepackage{amsmath, amssymb, hyperref, graphicx, listings}
+\lstset{basicstyle=\ttfamily\small, breaklines=true}
 
-\title{CSCI 497XF: Privacy Enhancing Technologies}
-\author{Homework 1}
+\title{Robotics - Lab 2}
+\author{Taiming YuenJames}
 
 \begin{document}
 
 \maketitle
 
+\section{Link and Arm Lengths}
 
+Based on the xacro file provided, the link lengths add up to a total reach of approximately 1.0872 meters.
+
+\[0.425+0.39225+0.093+0.09465+0.0823=1.0872\]
+
+\section{Maximum Range}
+
+In the x direction, I am able to achieve a maximum range of 0.948992457 meters. In the y direction, I am able to achieve a maximum range of 0.948989495 meters. In the z direction, I am able to achieve a maximum range of 1.03122057 meters. I am not able to reach the theoretical maximum range exactly because the points I chose (e.g. [0, 0, 2]) are optimally solved diagonally (with respect to the base), yeilding a shorter maximum length.
+
+\section*{Code}
+
+\lstinputlisting[language=Python]{../lab2.py}
+
+\section*{Visualizations}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1\textwidth]{sphere.png}
+	\caption{Reachable Poses as Convex Hull}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=1\textwidth]{fail.png}
+	\caption{Collision Checking Test Case Failure}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=1\textwidth]{pass.png}
+	\caption{Collision Checking Test Case Pass}
+\end{figure}
 
 \end{document}
